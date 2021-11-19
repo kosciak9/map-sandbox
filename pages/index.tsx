@@ -9,7 +9,7 @@ import { randomShapeAtom, updateShapeAtom } from '../atoms/randomShape'
 
 const layerStyle = {
   id: 'point',
-  type: 'fill',
+  type: 'fill' as 'fill',
   paint: {
     'fill-color': "rgba(45, 2, 156, 0.3)"
   }
@@ -37,7 +37,7 @@ const Home: NextPage = () => {
         <div style={{ boxShadow: '1px 1px 20px rgba(0, 0, 0, 0.5)' }}>
           <MainMap>
             <MapCatchment longitude={10} latitude={10} />
-            <Source id="my-data" type="geojson" data={randomShape}>
+            <Source id="my-data" type="geojson" data={randomShape as unknown as string}>
               <Layer {...layerStyle} />
             </Source>          </MainMap>
         </div>

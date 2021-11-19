@@ -11,7 +11,7 @@ const MapCatchment = ({ longitude, latitude }: { longitude: number, latitude: nu
     const [x, y] = context.viewport.project([longitude, latitude]);
 
     const markerStyle = {
-        position: 'absolute',
+        position: 'absolute' as never,
         background: '#fff',
         left: x,
         top: y
